@@ -1,4 +1,4 @@
-package lesson_06;
+package example;
 /*
     获取最值：
         获取数组中的最大值/最小值

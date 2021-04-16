@@ -1,4 +1,4 @@
-package lesson_06;
+package example;
 /*
     数组遍历
 
