@@ -12,8 +12,7 @@ public class Student {
     private int age;
 
     //构造方法
-    public Student(){
-    }
+    public Student(){ }
     public Student(String name){
         this.name = name;
     }
