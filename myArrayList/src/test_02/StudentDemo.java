@@ -43,15 +43,15 @@ public class StudentDemo {
         addStudent(student);
         addStudent(student);
 
-        for (int i = 0 ; i < student.size() ; i++){
+        for (int i = 0; i < student.size(); i++) {
             Student s = student.get(i);
-            System.out.println(s.getName()+s.getAge());
+            System.out.println(s.getName() + s.getAge());
         }
     }
 
     //返回值类型：void
     //参数：ArrayList<Student> array
-    public static void addStudent(ArrayList<Student> array){
+    public static void addStudent(ArrayList<Student> array) {
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入学生姓名：");
         String name = sc.nextLine();
