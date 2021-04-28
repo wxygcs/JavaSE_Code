@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class StudentManager {
     public static void main(String[] args) {
         //创建集合对象，用来存储学生数据
-        ArrayList<Student> arrayStudent = new ArrayList<Student>();
+        ArrayList<Student> arrayStudent = new ArrayList<>();
 
         //用循环回到主界面
         while (true) {
@@ -65,7 +65,7 @@ public class StudentManager {
             System.out.println("请输入学生学号：");
             newNumber = sc.nextLine();
 
-            if (isUsed(array, newNumber) == true) {
+            if (isUsed(array, newNumber)) {
                 System.out.println("输入的学号已经存在！请重新输入：");
             } else {
                 break;
