@@ -58,9 +58,20 @@ public class StudentManager {
     public static void addStudent(ArrayList<Student> array) {
         Scanner sc = new Scanner(System.in);
 
-        //显示提示信息，提示要输入何种信息
-        System.out.println("请输入学生学号：");
-        String newNumber = sc.nextLine();
+        //为了让newNumber能在while外被调用，定义在前
+        //用while循环来完善学号重复情况下再次输入
+        String newNumber;
+        while (true) {
+            System.out.println("请输入学生学号：");
+            newNumber = sc.nextLine();
+
+            if (isUsed(array, newNumber) == true) {
+                System.out.println("输入的学号已经存在！请重新输入：");
+            } else {
+                break;
+            }
+        }
+
         System.out.println("请输入学生姓名：");
         String newName = sc.nextLine();
         System.out.println("请输入学生年龄：");
@@ -82,7 +93,16 @@ public class StudentManager {
 
         //给出添加成功的提示
         System.out.println("添加成功！");
+    }
 
+    //判断学号是否已经被使用
+    public static boolean isUsed(ArrayList<Student> array, String number) {
+        for (int i = 0; i < array.size(); i++) {
+            if (array.get(i).getNumber().equals(number)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     //删除学生
